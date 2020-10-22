@@ -8,6 +8,11 @@ class Post(models.Model):
     content = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
 
-    # tag
+    def __str__(self):
+        return f"Post obj : {self.title}"
+
+    def __unicode__(self):
+        return f"Post obj : {self.title}"
+
     class Meta:
         ordering = ['created', ]
